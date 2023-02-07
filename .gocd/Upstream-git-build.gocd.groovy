@@ -6,13 +6,13 @@ GoCD.script {
   pipelines {
     pipeline('Upstream-git-build') {
       group = 'dummy-test'
-      labelTemplate = '${COUNT}'
+      labelTemplate = '${COUNT} - ${gitDemo[:7]}'
       lockBehavior = 'none'
       materials {
-        git {
+        git('gitDemo') {
           branch = 'master'
           shallowClone = false
-          url = 'git@github.com:eliminate-dengue-platform/gocd-ed-core-data.git'
+          url = 'https://github.com/phucDang-tw/github-action-demo.git'
         }
       }
       stages {
