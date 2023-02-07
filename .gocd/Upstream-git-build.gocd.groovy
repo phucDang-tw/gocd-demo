@@ -5,7 +5,7 @@
 GoCD.script {
   pipelines {
     pipeline('Upstream-git-build') {
-      group = 'dummy-test'
+      group = 'defaultGroup'
       labelTemplate = '${COUNT} - ${gitDemo[:7]}'
       lockBehavior = 'none'
       materials {
