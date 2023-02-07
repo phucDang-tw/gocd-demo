@@ -10,7 +10,7 @@ GoCD.script {
       lockBehavior = 'none'
       materials {
         git('gitDemo') {
-          branch = 'master'
+          branch = 'main'
           shallowClone = false
           url = 'https://github.com/phucDang-tw/github-action-demo.git'
         }
