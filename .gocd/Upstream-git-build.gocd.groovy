@@ -59,11 +59,11 @@ GoCD.script {
                   runIf = 'passed'
                 }
                 exec {
-                  commandLine = ['git', 'rev-parse --short HEAD']
+                  commandLine = ['git', 'rev-parse', '--short', 'HEAD']
                   runIf = 'passed'
                 }
                 exec {
-                  commandLine = ['echo', '${git rev-parse --short HEAD} > image.info']
+                  commandLine = ['echo', '${git rev-parse --short HEAD}' ,'>', 'image.info']
                   runIf = 'passed'
                 }
               }
